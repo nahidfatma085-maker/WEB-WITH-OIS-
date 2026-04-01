@@ -671,8 +671,8 @@
 </div>
 
 <script>
-    // ========== DEEPSEEK API KEY (YAHAN DALI GAYI HAI) ==========
-    const DEEPSEEK_API_KEY = "sk-3ef72fe4d73c40dcbf53d587f5a51988";
+    // ========== DEEPSEEK API KEY (NEW - UPDATED) ==========
+    const DEEPSEEK_API_KEY = "sk-25319b1a132341eeb0c1dc8831e4a26a";
     
     // Chat variables
     let chatHistory = [];
@@ -689,7 +689,7 @@
     // Open Chat Function
     function openChat() {
         chatOverlay.classList.add('active');
-        chatInput.focus();
+        setTimeout(() => chatInput.focus(), 100);
     }
     
     function closeChat() {
@@ -744,7 +744,8 @@
             const data = await response.json();
             
             if (data.error) {
-                throw new Error(data.error.message);
+                console.error('API Error:', data.error);
+                return 'क्षमा करें, मैं अभी जवाब नहीं दे पा रहा हूँ। कृपया कुछ देर बाद पुनः प्रयास करें।';
             }
             
             const reply = data.choices[0].message.content;
@@ -752,6 +753,11 @@
             // Update history
             chatHistory.push({ role: 'user', content: userMessage });
             chatHistory.push({ role: 'assistant', content: reply });
+            
+            // Keep history limited to last 10 exchanges (to save tokens)
+            if (chatHistory.length > 20) {
+                chatHistory = chatHistory.slice(-20);
+            }
             
             return reply;
             
@@ -804,7 +810,7 @@
     closeChatBtn.addEventListener('click', closeChat);
     sendBtn.addEventListener('click', sendMessage);
     
-    // Close on overlay click (background click)
+    // Close on overlay click
     chatOverlay.addEventListener('click', function(e) {
         if (e.target === chatOverlay) {
             closeChat();
