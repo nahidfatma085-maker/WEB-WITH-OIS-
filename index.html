@@ -109,7 +109,6 @@
         .nav-links .chat-btn:hover {
             background: linear-gradient(135deg, #1e40af, #1e3a8a);
             transform: scale(1.02);
-            color: white !important;
         }
 
         /* Mobile Menu Icon */
@@ -671,8 +670,8 @@
 </div>
 
 <script>
-    // ========== DEEPSEEK API KEY (NEW - UPDATED) ==========
-    const DEEPSEEK_API_KEY = "sk-25319b1a132341eeb0c1dc8831e4a26a";
+    // ========== GEMINI API KEY (PERMANENT FREE) ==========
+    const GEMINI_API_KEY = "AIzaSyAgDmhotxUBmqGP7zUqfm8lXAnbAdn8sT4";
     
     // Chat variables
     let chatHistory = [];
@@ -720,49 +719,81 @@
         if (indicator) indicator.remove();
     }
     
-    // Send message to DeepSeek API
-    async function sendMessageToDeepSeek(userMessage) {
+    // Send message to Gemini API
+    async function sendMessageToGemini(userMessage) {
         try {
-            // Prepare messages array with history
-            let messages = [...chatHistory];
-            messages.push({ role: 'user', content: userMessage });
+            // Prepare messages for Gemini format
+            let conversationParts = [];
             
-            const response = await fetch('https://api.deepseek.com/chat/completions', {
+            // Add history
+            for (let i = 0; i < chatHistory.length; i++) {
+                conversationParts.push({
+                    role: chatHistory[i].role === 'user' ? 'user' : 'model',
+                    parts: [{ text: chatHistory[i].content }]
+                });
+            }
+            
+            // Add current message
+            conversationParts.push({
+                role: 'user',
+                parts: [{ text: userMessage }]
+            });
+            
+            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${DEEPSEEK_API_KEY}`
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    model: 'deepseek-chat',
-                    messages: messages,
-                    temperature: 0.7,
-                    max_tokens: 500
+                    contents: conversationParts,
+                    generationConfig: {
+                        temperature: 0.7,
+                        maxOutputTokens: 500,
+                        topP: 0.95
+                    },
+                    safetySettings: [
+                        {
+                            category: "HARM_CATEGORY_HARASSMENT",
+                            threshold: "BLOCK_NONE"
+                        },
+                        {
+                            category: "HARM_CATEGORY_HATE_SPEECH",
+                            threshold: "BLOCK_NONE"
+                        },
+                        {
+                            category: "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                            threshold: "BLOCK_NONE"
+                        },
+                        {
+                            category: "HARM_CATEGORY_DANGEROUS_CONTENT",
+                            threshold: "BLOCK_NONE"
+                        }
+                    ]
                 })
             });
             
             const data = await response.json();
             
             if (data.error) {
-                console.error('API Error:', data.error);
+                console.error('Gemini API Error:', data.error);
                 return 'क्षमा करें, मैं अभी जवाब नहीं दे पा रहा हूँ। कृपया कुछ देर बाद पुनः प्रयास करें।';
             }
             
-            const reply = data.choices[0].message.content;
+            const reply = data.candidates[0].content.parts[0].text;
             
             // Update history
             chatHistory.push({ role: 'user', content: userMessage });
             chatHistory.push({ role: 'assistant', content: reply });
             
-            // Keep history limited to last 10 exchanges (to save tokens)
-            if (chatHistory.length > 20) {
-                chatHistory = chatHistory.slice(-20);
+            // Keep history limited to last 15 exchanges
+            if (chatHistory.length > 30) {
+                chatHistory = chatHistory.slice(-30);
             }
             
             return reply;
             
         } catch (error) {
-            console.error('DeepSeek API Error:', error);
+            console.error('Gemini API Error:', error);
             return 'क्षमा करें, मैं अभी जवाब नहीं दे पा रहा हूँ। कृपया कुछ देर बाद पुनः प्रयास करें।';
         }
     }
@@ -784,8 +815,8 @@
         // Show typing indicator
         showTyping();
         
-        // Get response from DeepSeek
-        const reply = await sendMessageToDeepSeek(message);
+        // Get response from Gemini
+        const reply = await sendMessageToGemini(message);
         
         // Remove typing indicator and add bot message
         removeTyping();
