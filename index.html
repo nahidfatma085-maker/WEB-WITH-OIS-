@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <!-- Google tag (gtag.js) - Google Analytics Added with NEW ID -->
+    <!-- Google tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QN0WHPHH77"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,15 +11,10 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="WEB WITH OIS - प्रोफेशनल वेबसाइट बनवाने के लिए आज ही संपर्क करें। छोटे व्यवसाय, ऑनलाइन स्टोर, स्कूल, जिम, रेस्टोरेंट और अन्य के लिए वेबसाइट सॉल्यूशन। फ्री कोटेशन पाएं।">
-    <meta name="keywords" content="website design, small business website, ecommerce website, school website, gym website, restaurant website, coaching center, cyber cafe website, website banane wala, affordable website, WEB WITH OIS">
+    <meta name="description" content="WEB WITH OIS - प्रोफेशनल वेबसाइट बनवाने के लिए आज ही संपर्क करें।">
+    <meta name="keywords" content="website design, small business website, ecommerce website, WEB WITH OIS">
     <meta name="author" content="WEB WITH OIS">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="WEB WITH OIS - प्रोफेशनल वेबसाइट बनवाएं">
-    <meta property="og:description" content="आपके व्यवसाय के लिए कस्टम वेबसाइट, SEO फ्रेंडली, गूगल एड्स रेडी। आज ही फॉर्म भरें।">
-    <meta property="og:type" content="website">
-    <meta name="format-detection" content="telephone=no">
-    <title>WEB WITH OIS | प्रोफेशनल वेबसाइट बनवाएं - छोटे व्यवसाय, ऑनलाइन स्टोर, स्कूल, जिम, रेस्टोरेंट</title>
+    <title>WEB WITH OIS | प्रोफेशनल वेबसाइट बनवाएं</title>
     <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,14 +62,12 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            letter-spacing: -0.3px;
         }
         .logo span {
             font-size: 0.85rem;
             font-weight: 500;
             color: #4b5563;
             display: block;
-            letter-spacing: 0.3px;
         }
 
         /* Desktop Menu */
@@ -90,6 +83,7 @@
             color: #1f2937;
             transition: 0.2s;
             font-size: 1rem;
+            cursor: pointer;
         }
         .nav-links a:hover {
             color: #2563eb;
@@ -101,11 +95,24 @@
             font-weight: 600;
             color: #1e40af;
         }
-        .nav-links .contact-phone i {
+        /* CHAT WITH OIS Button Style */
+        .nav-links .chat-btn {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            color: white !important;
+        }
+        .nav-links .chat-btn i {
             margin-right: 6px;
         }
+        .nav-links .chat-btn:hover {
+            background: linear-gradient(135deg, #1e40af, #1e3a8a);
+            transform: scale(1.02);
+            color: white !important;
+        }
 
-        /* Mobile Menu Icon (three lines) */
+        /* Mobile Menu Icon */
         .menu-icon {
             display: none;
             font-size: 1.8rem;
@@ -113,7 +120,7 @@
             color: #1e293b;
         }
 
-        /* Sidebar / Offcanvas menu for mobile */
+        /* Mobile Sidebar */
         .mobile-sidebar {
             position: fixed;
             top: 0;
@@ -146,13 +153,20 @@
         }
         .mobile-sidebar ul li a {
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 500;
             color: #1e293b;
             display: block;
         }
         .mobile-sidebar ul li a i {
             width: 28px;
+        }
+        .mobile-sidebar .mobile-chat-btn {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white !important;
+            padding: 12px 16px;
+            border-radius: 40px;
+            text-align: center;
         }
         .overlay {
             position: fixed;
@@ -182,13 +196,22 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin-bottom: 1rem;
         }
         .hero p {
             font-size: 1.2rem;
             color: #475569;
             max-width: 700px;
             margin: 0 auto;
+        }
+        .premium-badge {
+            background: #fef9c3;
+            color: #854d0e;
+            border-radius: 50px;
+            padding: 6px 14px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 12px;
         }
 
         /* Form Section */
@@ -198,7 +221,7 @@
             background: white;
             border-radius: 32px;
             box-shadow: 0 20px 35px -12px rgba(0,0,0,0.08);
-            padding: 2rem 2rem 2.5rem;
+            padding: 2rem;
         }
         .form-header {
             text-align: center;
@@ -208,11 +231,6 @@
             font-size: 2rem;
             font-weight: 700;
             color: #0f172a;
-        }
-        .form-header p {
-            color: #2563eb;
-            font-weight: 500;
-            margin-top: 8px;
         }
         .website-form {
             display: flex;
@@ -234,8 +252,6 @@
             border-radius: 20px;
             font-family: inherit;
             font-size: 1rem;
-            transition: 0.2s;
-            background: #fff;
         }
         select:focus, input:focus, textarea:focus {
             outline: none;
@@ -256,12 +272,9 @@
             font-weight: 600;
             border-radius: 40px;
             cursor: pointer;
-            transition: 0.2s;
-            margin-top: 8px;
         }
         .btn-submit:hover {
             background: #1d4ed8;
-            transform: scale(0.98);
         }
         .success-msg {
             background: #dcfce7;
@@ -272,17 +285,6 @@
             margin-top: 12px;
             display: none;
         }
-        /* Premium & Google Ads tag */
-        .premium-badge {
-            background: #fef9c3;
-            color: #854d0e;
-            border-radius: 50px;
-            padding: 6px 14px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 12px;
-        }
         .google-ads-note {
             background: #f1f5f9;
             padding: 8px 16px;
@@ -290,10 +292,9 @@
             font-size: 0.8rem;
             text-align: center;
             margin-top: 18px;
-            color: #334155;
         }
 
-        /* Features & why choose */
+        /* Features */
         .features {
             max-width: 1280px;
             margin: 2rem auto;
@@ -306,23 +307,19 @@
             background: white;
             padding: 1.5rem;
             border-radius: 28px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
             border: 1px solid #eef2ff;
-            transition: all 0.2s;
         }
         .card i {
             font-size: 2rem;
             color: #2563eb;
             margin-bottom: 1rem;
         }
-        .card h3 {
-            margin-bottom: 0.5rem;
-        }
-        /* Terms & Footer */
+
+        /* Footer */
         .terms-footer {
             background: #0f172a;
             color: #cbd5e1;
-            padding: 2rem 2rem 1.5rem;
+            padding: 2rem;
             margin-top: 3rem;
         }
         .terms-container {
@@ -335,13 +332,7 @@
         }
         .terms-text {
             font-size: 0.85rem;
-            line-height: 1.5;
             max-width: 600px;
-        }
-        .footer-contact a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-weight: 500;
         }
         .call-link {
             background: #1e293b;
@@ -350,42 +341,202 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            transition: 0.2s;
-        }
-        .call-link:hover {
-            background: #2563eb;
             color: white;
+            text-decoration: none;
         }
         hr {
             border-color: #334155;
             margin: 1rem 0;
         }
-        @media (max-width: 780px) {
-            .nav-links {
-                display: none;
+
+        /* ========== CHAT WINDOW STYLES ========== */
+        .chat-window-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+        .chat-window-overlay.active {
+            display: flex;
+        }
+        .chat-container {
+            width: 450px;
+            height: 650px;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            animation: slideUp 0.4s cubic-bezier(0.34, 1.2, 0.64, 1);
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
             }
-            .menu-icon {
-                display: block;
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
             }
-            .hero h1 {
-                font-size: 1.8rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .chat-header {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .chat-header h3 {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .chat-header h3 i {
+            font-size: 24px;
+        }
+        .close-chat-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        .close-chat-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .message {
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            line-height: 1.5;
+            animation: messagePop 0.3s ease;
+        }
+        @keyframes messagePop {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
             }
-            .form-section {
-                margin: 1rem;
-                padding: 1.5rem;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
-            .row-2cols {
-                grid-template-columns: 1fr;
-            }
-            .terms-container {
-                flex-direction: column;
+        }
+        .user-message {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+        .bot-message {
+            background: white;
+            color: #1e293b;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .typing-indicator {
+            background: white;
+            padding: 12px 16px;
+            border-radius: 20px;
+            align-self: flex-start;
+            display: flex;
+            gap: 5px;
+            border: 1px solid #e2e8f0;
+        }
+        .typing-indicator span {
+            width: 8px;
+            height: 8px;
+            background: #94a3b8;
+            border-radius: 50%;
+            animation: typingBounce 1.4s infinite ease-in-out;
+        }
+        .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes typingBounce {
+            0%, 80%, 100% { transform: scale(0.6); opacity: 0.5; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+        .chat-input-area {
+            padding: 16px;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 10px;
+        }
+        .chat-input-field {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 28px;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+        }
+        .chat-input-field:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+        }
+        .send-chat-btn {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            border: none;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .send-chat-btn:hover {
+            transform: scale(1.05);
+        }
+        .send-chat-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        @media (max-width: 550px) {
+            .chat-container {
+                width: calc(100vw - 40px);
+                height: 80vh;
+                margin: 20px;
             }
         }
     </style>
 </head>
 <body>
 
-<!-- Header / Navigation with updated name WEB WITH OIS -->
+<!-- Header / Navigation -->
 <header class="header">
     <div class="nav-container">
         <div class="logo">
@@ -396,6 +547,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact-form">Contact</a></li>
+            <li><a class="chat-btn" id="openChatBtnDesktop"><i class="fas fa-comment-dots"></i> CHAT WITH OIS</a></li>
             <li><a href="tel:+917505260359" class="contact-phone"><i class="fas fa-phone-alt"></i> 7505260359</a></li>
         </ul>
         <div class="menu-icon" id="menuToggleBtn">
@@ -404,7 +556,7 @@
     </div>
 </header>
 
-<!-- Mobile Sidebar Menu -->
+<!-- Mobile Sidebar -->
 <div class="mobile-sidebar" id="mobileSidebar">
     <div class="close-sidebar" id="closeSidebarBtn">
         <i class="fas fa-times"></i>
@@ -413,6 +565,7 @@
         <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
         <li><a href="#services"><i class="fas fa-cog"></i> Services</a></li>
         <li><a href="#contact-form"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a class="mobile-chat-btn" id="openChatBtnMobile"><i class="fas fa-comment-dots"></i> CHAT WITH OIS</a></li>
         <li><a href="tel:+917505260359"><i class="fas fa-phone-alt"></i> Call: 7505260359</a></li>
     </ul>
 </div>
@@ -423,177 +576,288 @@
     <div class="hero">
         <div class="premium-badge"><i class="fas fa-crown"></i> प्रीमियम वेबसाइट सर्विस | Google Ads Ready | SEO फ्रेंडली</div>
         <h1>अपना बिजनेस ऑनलाइन ले जाएं 🚀</h1>
-        <p>हम बनाते हैं आकर्षक, तेज़ और गूगल पर रैंकिंग वाली वेबसाइट। छोटे व्यवसाय से लेकर ऑनलाइन स्टोर तक।</p>
+        <p>हम बनाते हैं आकर्षक, तेज़ और गूगल पर रैंकिंग वाली वेबसाइट।</p>
     </div>
 </section>
 
-<!-- Main Form Section - Website banwane ke liye form -->
+<!-- Form Section -->
 <div class="form-section" id="contact-form">
     <div class="form-header">
         <h2>📢 वेबसाइट बनवाने के लिए फॉर्म भरें</h2>
-        <p>WEB WITH OIS से संपर्क करें, 24 घंटे में रिस्पॉन्स | प्रीमियम प्लान उपलब्ध</p>
+        <p>WEB WITH OIS से संपर्क करें, 24 घंटे में रिस्पॉन्स</p>
     </div>
-    <!-- Formspree integration -->
     <form class="website-form" id="websiteRequestForm" action="https://formspree.io/f/xvzvplrp" method="POST">
-        <!-- Website Type Selection -->
         <div class="form-group">
-            <label for="websiteType"><i class="fas fa-globe"></i> वेबसाइट का प्रकार चुनें *</label>
+            <label for="websiteType">वेबसाइट का प्रकार चुनें *</label>
             <select name="website_type" id="websiteType" required>
                 <option value="" disabled selected>-- सेलेक्ट करें --</option>
-                <option value="small_business">Small Business (छोटा व्यवसाय)</option>
+                <option value="small_business">Small Business</option>
                 <option value="online_store">Online Store / E-commerce</option>
                 <option value="school">School / Educational Institute</option>
                 <option value="gym">Gym / Fitness Center</option>
                 <option value="restaurant">Restaurant / Cafe</option>
-                <option value="whole_sale_store">Wholesale Store</option>
-                <option value="coaching_center">Coaching Center / Academy</option>
-                <option value="cafe">Cafe / Coffee Shop</option>
-                <option value="cyber_cafe">Cyber Cafe / Internet Lounge</option>
-                <option value="salon">Salon / Beauty Parlour</option>
-                <option value="real_estate">Real Estate / Property</option>
-                <option value="medical_clinic">Medical Clinic / Hospital</option>
-                <option value="portfolio">Portfolio / Freelancer</option>
-                <option value="other">Other (कृपया नीचे बताएं)</option>
             </select>
         </div>
-        <!-- Name Field -->
         <div class="form-group">
-            <label for="fullName"><i class="fas fa-user"></i> पूरा नाम *</label>
-            <input type="text" id="fullName" name="name" placeholder="जैसे: राजेश कुमार" required>
+            <label for="fullName">पूरा नाम *</label>
+            <input type="text" id="fullName" name="name" required>
         </div>
-        <!-- Phone Number (with call suggestion) -->
         <div class="row-2cols">
             <div class="form-group">
-                <label for="phone"><i class="fas fa-phone"></i> मोबाइल नंबर *</label>
-                <input type="tel" id="phone" name="phone" placeholder="9999999999" required>
-                <small style="color:#2563eb;"><i class="fas fa-info-circle"></i> इस नंबर पर हम आपसे संपर्क करेंगे</small>
+                <label for="phone">मोबाइल नंबर *</label>
+                <input type="tel" id="phone" name="phone" required>
             </div>
             <div class="form-group">
-                <label for="email"><i class="fas fa-envelope"></i> ईमेल (वैकल्पिक)</label>
-                <input type="email" id="email" name="email" placeholder="example@domain.com">
+                <label for="email">ईमेल (वैकल्पिक)</label>
+                <input type="email" id="email" name="email">
             </div>
         </div>
-        <!-- Message -->
         <div class="form-group">
-            <label for="message"><i class="fas fa-comment-dots"></i> संदेश / विशेष आवश्यकता</label>
-            <textarea id="message" name="message" rows="3" placeholder="बताएं कैसी वेबसाइट चाहिए, बजट, फीचर्स..."></textarea>
+            <label for="message">संदेश</label>
+            <textarea id="message" name="message" rows="3"></textarea>
         </div>
-        <!-- hidden field for extra routing -->
-        <input type="hidden" name="_subject" value="New Website Request from WEB WITH OIS">
+        <input type="hidden" name="_subject" value="New Website Request">
         <input type="hidden" name="_replyto" id="replytoEmail">
-        <!-- Submit Button -->
-        <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> अभी सबमिट करें & प्रीमियम कोटेशन पाएं</button>
-        <div class="success-msg" id="formSuccessMsg">
-            ✅ धन्यवाद! आपका फॉर्म सफलतापूर्वक भेज दिया गया है। WEB WITH OIS टीम 24 घंटे में आपसे संपर्क करेगी।
-        </div>
-        <div class="google-ads-note">
-            🔍 <strong>Google Ads Enabled</strong> | SEO Optimized Structure | हर वेबसाइट प्रीमियम होस्टिंग और स्पीड बूस्ट के साथ
-        </div>
+        <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> अभी सबमिट करें</button>
+        <div class="success-msg" id="formSuccessMsg">✅ धन्यवाद! हम आपसे संपर्क करेंगे।</div>
+        <div class="google-ads-note">🔍 Google Ads Enabled | SEO Optimized Structure</div>
     </form>
 </div>
 
-<!-- Services Highlight (premium & types) -->
+<!-- Services -->
 <section id="services">
     <div class="features">
-        <div class="card">
-            <i class="fas fa-store"></i>
-            <h3>Small Business / ऑनलाइन स्टोर</h3>
-            <p>कस्टम डिज़ाइन, उत्पाद प्रबंधन, पेमेंट गेटवे, गूगल शॉपिंग तैयार।</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-school"></i>
-            <h3>School & Coaching</h3>
-            <p>ऑनलाइन एडमिशन फॉर्म, रिजल्ट, डिजिटल लाइब्रेरी, छात्र पोर्टल।</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-dumbbell"></i>
-            <h3>Gym / Fitness / Salon</h3>
-            <p>मेंबरशिप प्रबंधन, क्लास बुकिंग, ऑनलाइन भुगतान और प्रमोशनल टूल्स।</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-utensils"></i>
-            <h3>Restaurant / Cafe / Cyber Cafe</h3>
-            <p>ऑनलाइन ऑर्डर, टेबल बुकिंग, मेनू कार्ड, WiFi पेज, डिजिटल प्रेजेंस।</p>
-        </div>
-    </div>
-    <div style="text-align: center; margin: 0 20px 20px;">
-        <span class="premium-badge"><i class="fas fa-gem"></i> प्रीमियम प्लान: अनलिमिटेड पेज, एसईओ, 1 साल फ्री होस्टिंग + गूगल एड्स सपोर्ट</span>
+        <div class="card"><i class="fas fa-store"></i><h3>Small Business</h3><p>कस्टम डिज़ाइन, पेमेंट गेटवे</p></div>
+        <div class="card"><i class="fas fa-school"></i><h3>School & Coaching</h3><p>ऑनलाइन एडमिशन फॉर्म</p></div>
+        <div class="card"><i class="fas fa-dumbbell"></i><h3>Gym / Fitness</h3><p>मेंबरशिप प्रबंधन</p></div>
+        <div class="card"><i class="fas fa-utensils"></i><h3>Restaurant / Cafe</h3><p>ऑनलाइन ऑर्डर</p></div>
     </div>
 </section>
 
-<!-- Terms & Condition + footer with call link -->
+<!-- Footer -->
 <footer class="terms-footer">
     <div class="terms-container">
         <div class="terms-text">
-            <h3 style="color:white;">📜 नियम एवं शर्तें (Terms & Conditions)</h3>
-            <p>वेबसाइट डेवलपमेंट सर्विस के लिए ग्राहक को प्रोजेक्ट शुरू होने से पहले 50% अग्रिम भुगतान करना होगा। डिलीवरी 7-14 कार्य दिवसों में दी जाएगी। होस्टिंग और डोमेन रिन्यूअल शुल्क अलग से लागू होते हैं। सभी वेबसाइटें SEO-फ्रेंडली, मोबाइल रिस्पॉन्सिव और गूगल एड्स के लिए तैयार होंगी। प्रीमियम सपोर्ट पैकेज मासिक/वार्षिक उपलब्ध है। ग्राहक की सहमति के बिना डिजाइन में कोई बदलाव नहीं किया जाता। कॉपीराइट सामग्री ग्राहक के अधीन होगी।</p>
-            <p><i class="fas fa-shield-alt"></i> सुरक्षित लेनदेन | डेटा प्राइवेसी | 1 साल फ्री टेक्निकल सपोर्ट प्रीमियम प्लान में</p>
+            <h3 style="color:white;">📜 नियम एवं शर्तें</h3>
+            <p>वेबसाइट डेवलपमेंट के लिए 50% अग्रिम भुगतान। डिलीवरी 7-14 दिन।</p>
         </div>
         <div class="footer-contact">
             <h4 style="color:white;">📞 संपर्क करें</h4>
-            <a href="tel:+917505260359" class="call-link" style="color:white; text-decoration:none; background:#1e293b; padding: 10px 20px; border-radius: 40px; display:inline-flex; gap:10px;">
-                <i class="fas fa-phone-alt"></i> तुरंत कॉल करें: 7505260359
-            </a>
-            <p style="margin-top: 1rem;"><i class="fas fa-envelope"></i> support@webwithois.com (demo)</p>
-            <p><i class="fab fa-google"></i> Google Ads Partner | 100% SEO Friendly Code</p>
+            <a href="tel:+917505260359" class="call-link"><i class="fas fa-phone-alt"></i> 7505260359</a>
         </div>
     </div>
     <hr>
-    <div style="text-align: center; font-size: 0.75rem;">© 2025 WEB WITH OIS – हर छोटे बिजनेस के लिए डिजिटल समाधान | प्रीमियम वेबसाइट सर्विस</div>
+    <div style="text-align: center;">© 2025 WEB WITH OIS</div>
 </footer>
 
+<!-- ========== CHAT WINDOW OVERLAY ========== -->
+<div class="chat-window-overlay" id="chatOverlay">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h3><i class="fas fa-robot"></i> OIS AI Assistant</h3>
+            <button class="close-chat-btn" id="closeChatBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                👋 नमस्ते! मैं OIS AI Assistant हूँ।<br>
+                मैं आपकी वेबसाइट, डिजिटल मार्केटिंग और ऑनलाइन बिजनेस से जुड़ी हर समस्या का समाधान दे सकता हूँ। पूछिए, जवाब दूंगा!
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" class="chat-input-field" id="chatInput" placeholder="अपना सवाल लिखें..." onkeypress="handleChatKeyPress(event)">
+            <button class="send-chat-btn" id="sendChatBtn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
+
 <script>
-    // Mobile sidebar toggle functionality (three lines menu)
+    // ========== DEEPSEEK API KEY (YAHAN DALI GAYI HAI) ==========
+    const DEEPSEEK_API_KEY = "sk-3ef72fe4d73c40dcbf53d587f5a51988";
+    
+    // Chat variables
+    let chatHistory = [];
+    let isSending = false;
+    
+    // DOM Elements
+    const chatOverlay = document.getElementById('chatOverlay');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const sendBtn = document.getElementById('sendChatBtn');
+    const closeChatBtn = document.getElementById('closeChatBtn');
+    const openChatBtns = document.querySelectorAll('#openChatBtnDesktop, #openChatBtnMobile');
+    
+    // Open Chat Function
+    function openChat() {
+        chatOverlay.classList.add('active');
+        chatInput.focus();
+    }
+    
+    function closeChat() {
+        chatOverlay.classList.remove('active');
+    }
+    
+    // Add message to chat
+    function addMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${sender === 'user' ? 'user-message' : 'bot-message'}`;
+        messageDiv.innerHTML = text.replace(/\n/g, '<br>');
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    // Show typing indicator
+    function showTyping() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'typing-indicator';
+        typingDiv.id = 'typingIndicator';
+        typingDiv.innerHTML = '<span></span><span></span><span></span>';
+        chatMessages.appendChild(typingDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    function removeTyping() {
+        const indicator = document.getElementById('typingIndicator');
+        if (indicator) indicator.remove();
+    }
+    
+    // Send message to DeepSeek API
+    async function sendMessageToDeepSeek(userMessage) {
+        try {
+            // Prepare messages array with history
+            let messages = [...chatHistory];
+            messages.push({ role: 'user', content: userMessage });
+            
+            const response = await fetch('https://api.deepseek.com/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${DEEPSEEK_API_KEY}`
+                },
+                body: JSON.stringify({
+                    model: 'deepseek-chat',
+                    messages: messages,
+                    temperature: 0.7,
+                    max_tokens: 500
+                })
+            });
+            
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error.message);
+            }
+            
+            const reply = data.choices[0].message.content;
+            
+            // Update history
+            chatHistory.push({ role: 'user', content: userMessage });
+            chatHistory.push({ role: 'assistant', content: reply });
+            
+            return reply;
+            
+        } catch (error) {
+            console.error('DeepSeek API Error:', error);
+            return 'क्षमा करें, मैं अभी जवाब नहीं दे पा रहा हूँ। कृपया कुछ देर बाद पुनः प्रयास करें।';
+        }
+    }
+    
+    // Main send function
+    async function sendMessage() {
+        if (isSending) return;
+        const message = chatInput.value.trim();
+        if (!message) return;
+        
+        isSending = true;
+        sendBtn.disabled = true;
+        chatInput.disabled = true;
+        
+        // Add user message
+        addMessage(message, 'user');
+        chatInput.value = '';
+        
+        // Show typing indicator
+        showTyping();
+        
+        // Get response from DeepSeek
+        const reply = await sendMessageToDeepSeek(message);
+        
+        // Remove typing indicator and add bot message
+        removeTyping();
+        addMessage(reply, 'bot');
+        
+        isSending = false;
+        sendBtn.disabled = false;
+        chatInput.disabled = false;
+        chatInput.focus();
+    }
+    
+    function handleChatKeyPress(event) {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    }
+    
+    // Event Listeners
+    openChatBtns.forEach(btn => {
+        btn.addEventListener('click', openChat);
+    });
+    closeChatBtn.addEventListener('click', closeChat);
+    sendBtn.addEventListener('click', sendMessage);
+    
+    // Close on overlay click (background click)
+    chatOverlay.addEventListener('click', function(e) {
+        if (e.target === chatOverlay) {
+            closeChat();
+        }
+    });
+    
+    // ========== EXISTING SITE FUNCTIONALITY ==========
+    // Mobile sidebar toggle
     const menuToggle = document.getElementById('menuToggleBtn');
     const mobileSidebar = document.getElementById('mobileSidebar');
     const overlay = document.getElementById('overlay');
     const closeSidebarBtn = document.getElementById('closeSidebarBtn');
-
+    
     function openSidebar() {
         mobileSidebar.classList.add('active');
         overlay.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
-    function closeSidebar() {
+    function closeSidebarFunc() {
         mobileSidebar.classList.remove('active');
         overlay.classList.remove('active');
         document.body.style.overflow = '';
     }
-    menuToggle.addEventListener('click', openSidebar);
-    closeSidebarBtn.addEventListener('click', closeSidebar);
-    overlay.addEventListener('click', closeSidebar);
+    if (menuToggle) menuToggle.addEventListener('click', openSidebar);
+    if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebarFunc);
+    if (overlay) overlay.addEventListener('click', closeSidebarFunc);
     
-    // Close sidebar on link click (for mobile)
-    const mobileLinks = mobileSidebar.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', closeSidebar);
+    const mobileLinks = mobileSidebar?.querySelectorAll('a');
+    mobileLinks?.forEach(link => {
+        link.addEventListener('click', closeSidebarFunc);
     });
-
-    // Formspree handling: show success message after submit (fetch API to avoid redirect)
+    
+    // Form handling
     const form = document.getElementById('websiteRequestForm');
     const successDiv = document.getElementById('formSuccessMsg');
     
     if (form) {
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
-            // client validation
             const websiteType = document.getElementById('websiteType').value;
             const fullName = document.getElementById('fullName').value.trim();
             const phone = document.getElementById('phone').value.trim();
             if(!websiteType || !fullName || !phone) {
-                alert('कृपया सभी आवश्यक फील्ड भरें: वेबसाइट प्रकार, नाम और मोबाइल नंबर');
+                alert('कृपया सभी आवश्यक फील्ड भरें');
                 return;
             }
             if(phone.length < 10) {
-                alert('कृपया सही मोबाइल नंबर दर्ज करें (10 अंक)');
+                alert('सही मोबाइल नंबर दर्ज करें');
                 return;
             }
-            // set hidden replyto field for email
             const emailField = document.getElementById('email');
             const replyto = document.getElementById('replytoEmail');
-            if(replyto) {
-                replyto.value = emailField.value || 'no-reply@webwithois.com';
-            }
+            if(replyto) replyto.value = emailField.value || 'no-reply@webwithois.com';
             const formData = new FormData(form);
             try {
                 const response = await fetch('https://formspree.io/f/xvzvplrp', {
@@ -604,20 +868,17 @@
                 if (response.ok) {
                     form.reset();
                     successDiv.style.display = 'block';
-                    setTimeout(() => {
-                        successDiv.style.display = 'none';
-                    }, 6000);
-                    successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    setTimeout(() => { successDiv.style.display = 'none'; }, 6000);
                 } else {
-                    alert('फॉर्म सबमिट में त्रुटि, कृपया पुन: प्रयास करें या सीधे कॉल करें।');
+                    alert('फॉर्म सबमिट में त्रुटि');
                 }
             } catch (err) {
-                alert('नेटवर्क समस्या, कृपया कॉल या व्हाट्सएप करें 7505260359');
+                alert('नेटवर्क समस्या');
             }
         });
     }
     
-    // Smooth scroll for anchor links
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
@@ -629,31 +890,6 @@
             }
         });
     });
-    
-    // set default replyto on load
-    window.addEventListener('DOMContentLoaded', () => {
-        const reply = document.getElementById('replytoEmail');
-        if(reply && !reply.value) reply.value = "customer@webwithois.com";
-    });
-    
-    // Add JSON-LD schema for business (updated with new name)
-    const scriptSchema = document.createElement('script');
-    scriptSchema.type = 'application/ld+json';
-    scriptSchema.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "WEB WITH OIS",
-        "description": "प्रोफेशनल वेबसाइट डिजाइन, छोटे व्यवसाय, ऑनलाइन स्टोर, स्कूल, जिम, रेस्टोरेंट के लिए वेबसाइट सॉल्यूशन।",
-        "telephone": "+917505260359",
-        "url": window.location.href,
-        "serviceType": ["Website Development", "E-commerce Website", "Business Website", "SEO Optimization", "Google Ads Setup"],
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "India",
-            "addressCountry": "IN"
-        }
-    });
-    document.head.appendChild(scriptSchema);
 </script>
 </body>
 </html>
